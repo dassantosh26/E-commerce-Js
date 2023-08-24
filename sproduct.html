@@ -38,10 +38,10 @@
     <section id="prod-details" class="section-p1">
       <div class="single-pro-img">
         <img
+          id="MainImg
+        "
           src="Images/products/f1.jpg"
           width="100%"
-          id="mainImg
-        "
           alt=""
         />
         <div class="small-img-group">
@@ -244,20 +244,26 @@
 
     <!-- Script -->
     <script>
-      var mainImg = document.getElementById("mainImg");
-      var smallImg = document.getElementsByClassName("small-img");
-      smallImg[0].onclick = function () {
-        mainImg[0].src = smallImg[0].src;
-      };
-      smallImg[1].onclick = function () {
-        mainImg.src = smallImg[1].src;
-      };
-      smallImg[2].onclick = function () {
-        mainImg.src = smallImg[2].src;
-      };
-      smallImg[3].onclick = function () {
-        mainImg.src = smallImg[3].src;
-      };
+      const mainImg = document.getElementById("MainImg");
+      const smallImg = document.querySelectorAll(".small-img");
+      console.log(mainImg);
+      // smallImg[0].onclick = function () {
+      //   mainImg[0].src = smallImg[0].src;
+      // };
+      // smallImg[1].onclick = function () {
+      //   mainImg.src = smallImg[1].src;
+      // };
+      // smallImg[2].onclick = function () {
+      //   mainImg.src = smallImg[2].src;
+      // };
+      // smallImg[3].onclick = function () {
+      //   mainImg.src = smallImg[3].src;
+      // };
+      smallImg.forEach((simg) => {
+        simg.addEventListener("click", () => {
+          mainImg.src = simg.src;
+        });
+      });
     </script>
     <script src="./script.js"></script>
   </body>
