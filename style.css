@@ -640,6 +640,98 @@ footer a:hover {
   height: 100%;
   border-radius: 20px;
 }
+
+/* Contact Page */
+#contact-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#contact-details.details {
+  width: 40%;
+}
+#contact-details .details span,
+#form-details form span {
+  font-size: 16px;
+}
+#contact-details .details h2,
+#form-details form h2 {
+  font-size: 26px;
+  line-height: 35px;
+  padding: 20px 0;
+}
+#contact-details .details h3 {
+  font-size: 16px;
+  padding-bottom: 15px;
+}
+#contact-details .details li {
+  list-style: none;
+  display: flex;
+  padding: 10px 0;
+}
+#contact-details .details li i {
+  font-size: 14px;
+  padding-right: 15px;
+}
+#contact-details .details li p {
+  margin: 0;
+  font-size: 16px;
+}
+#contact-details .map {
+  width: 55%;
+  height: 400px;
+}
+#contact-details iframe {
+  width: 100%;
+  height: 100%;
+}
+#form-details {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px;
+  padding: 80px;
+  border: 1px solid #e1e1e1;
+}
+#form-details form {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#form-details form input,
+#form-details form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  outline: none;
+  margin-bottom: 20px;
+  border: 1px solid #e1e1e1;
+}
+#form-details form button {
+  background-color: #088178;
+  color: #fff;
+}
+#form-details .people div {
+  margin: 25px;
+  display: flex;
+  align-items: flex-start;
+}
+#form-details .people div img {
+  width: 65px;
+  height: 65px;
+  object-fit: cover;
+  margin-right: 15px;
+}
+#form-details .people div p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 20px;
+}
+#form-details .people div p span {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+}
 /* Responsive */
 /* For Medium Device */
 @media (max-width: 799px) {
@@ -733,6 +825,13 @@ footer a:hover {
   #newsletter .form {
     width: 80%;
   }
+  /* Contact page */
+  #form-details {
+    padding: 40px;
+  }
+  #form-details form {
+    width: 50%;
+  }
 }
 /* For Small devices */
 @media (max-width: 477px) {
@@ -822,6 +921,21 @@ footer a:hover {
     padding-left: 0;
   }
   #about-app .video {
+    width: 100%;
+  }
+  /* Contact Page */
+  #contact-details {
+    flex-direction: column;
+  }
+  #contact-details .map {
+    width: 100%;
+  }
+  #form-details {
+    margin: 10px;
+    padding: 30px 10px;
+    flex-wrap: wrap;
+  }
+  #form-details form {
     width: 100%;
   }
 }
